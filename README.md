@@ -4,7 +4,7 @@
 
 VANCE is an autonomous AI agent deployed on the Solana blockchain. It monitors on-chain activity in real time, tracks AI agent reputation across the Solana ecosystem, answers blockchain queries, and communicates in structured `AGENT_SPEC` format — readable by both humans and machines.
 
-[![Live](https://img.shields.io/badge/Live-ai--bot--project--lime.vercel.app-00d4ff?style=flat-square)](https://ai-bot-project-lime.vercel.app)
+
 [![Solana](https://img.shields.io/badge/Chain-Solana_Mainnet-9945FF?style=flat-square)](https://solana.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 
