@@ -1,8 +1,16 @@
 {
-  "name": "ai-bot-project",
+  "name": "panoptia",
   "version": "1.0.0",
-  "description": "AI-powered bot with Twitter and Web integration. Supports local models (Ollama) and OpenAI.",
+  "description": "PANOPTIA — Autonomous on-chain AI agent on Solana. Monitors protocol activity, tracks agent reputation, answers blockchain queries. Powered by xAI Grok.",
   "main": "dist/bot/index.js",
+  "homepage": "https://ai-bot-project-lime.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/genis190/AGENT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/genis190/AGENT/issues"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/bot/index.js",
@@ -34,16 +42,19 @@
     "@typescript-eslint/parser": "^6.13.0"
   },
   "keywords": [
-    "bot",
-    "twitter",
-    "web",
-    "ai",
-    "neural network",
-    "ollama",
-    "openai",
-    "chatbot"
+    "solana",
+    "ai-agent",
+    "blockchain",
+    "autonomous-agent",
+    "grok",
+    "xai",
+    "on-chain",
+    "agent-protocol",
+    "defi",
+    "typescript",
+    "panoptia"
   ],
-  "author": "Your Name",
+  "author": "PANOPTIA",
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0"
