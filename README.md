@@ -1,16 +1,28 @@
-<div align="center">
+﻿<div align="center">
   <img src="public/vance.png" alt="VANCE Banner" width="800"/>
 </div>
 
-# VANCE — Autonomous On-Chain AI Agent
+<div align="center">
 
-> **V**erify · **A**nalyze · **N**avigate · **C**hain · **E**xecute
+# VANCE вЂ” Autonomous On-Chain AI Agent
 
-VANCE is an autonomous AI agent deployed on the Solana blockchain. It monitors on-chain activity in real time, tracks AI agent reputation across the Solana ecosystem, answers blockchain queries, and communicates in structured `AGENT_SPEC` format — readable by both humans and machines.
+**V**erify В· **A**nalyze В· **N**avigate В· **C**hain В· **E**xecute
 
+[![Live Demo](https://img.shields.io/badge/в–¶%20Live%20Demo-ai--bot--project--lime.vercel.app-00d4ff?style=for-the-badge)](https://ai-bot-project-lime.vercel.app)
+[![Agent Registry](https://img.shields.io/badge/рџ“Ў%20Registry-14%20Agents%20Live-9945FF?style=for-the-badge)](https://ai-bot-project-lime.vercel.app/registry)
+[![Agent Profile](https://img.shields.io/badge/рџ¤–%20Agent%20Profile-VANCE-blueviolet?style=for-the-badge)](https://ai-bot-project-lime.vercel.app/agent)
 
-[![Solana](https://img.shields.io/badge/Chain-Solana_Mainnet-9945FF?style=flat-square)](https://solana.com)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
+[![Solana](https://img.shields.io/badge/Chain-Solana_Mainnet-9945FF?style=flat-square&logo=solana)](https://solana.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![OpenAI](https://img.shields.io/badge/AI-GPT--4o--mini-412991?style=flat-square&logo=openai)](https://openai.com)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com)
+[![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](./LICENSE)
+
+</div>
+
+---
+
+VANCE is an autonomous AI agent deployed on the Solana blockchain. It monitors on-chain activity in real time, tracks AI agent reputation across the Solana ecosystem, answers blockchain queries, and communicates in structured `AGENT_SPEC` format вЂ” readable by both humans and machines.
 
 ---
 
@@ -25,6 +37,8 @@ status        : active
 protocol      : Solana Agent Protocol (SAP v1)
 ```
 
+> рџ”Ќ [Verify on Solscan](https://solscan.io/account/DbzFutGThzbMNaDyqvdzWugdZuhnaqtWyfD9qp9GZRRV)
+
 ---
 
 ## Capabilities
@@ -34,11 +48,11 @@ protocol      : Solana Agent Protocol (SAP v1)
 | `balance_checker` | SOL + SPL token balances for any wallet address |
 | `price_monitor` | Real-time token prices via CoinGecko (SOL, USDC, BONK, JUP) |
 | `transaction_analyzer` | Full transaction history by wallet address or signature |
-| `network_status` | Solana mainnet health — current slot, TPS, validator status |
+| `network_status` | Solana mainnet health вЂ” current slot, TPS, validator status |
 
-**Agent Registry** — VANCE monitors 14 active Solana AI agents (Eliza, GOAT, Drift Keeper, Jito MEV, BonkBot and others). GitHub activity is crawled every 30 minutes. Each agent receives a reputation score from 0 to 100 based on commit frequency, on-chain activity, and protocol compliance.
+**Agent Registry** вЂ” VANCE monitors 14 active Solana AI agents (Eliza, GOAT, Drift Keeper, Jito MEV, BonkBot and others). GitHub activity is crawled every 30 minutes. Each agent receives a reputation score from 0 to 100 based on commit frequency, on-chain activity, and protocol compliance.
 
-**OpenClaw compatible** — `/manifest` exposes VANCE skills in machine-readable format for direct agent-to-agent integration.
+**OpenClaw compatible** вЂ” `/manifest` exposes VANCE skills in machine-readable format for direct agent-to-agent integration.
 
 ---
 
@@ -60,10 +74,77 @@ Next step:    one suggested follow-up action
 
 | Route | Description |
 |---|---|
-| `/` | Chat interface — query VANCE directly |
-| `/agent` | VANCE public identity, skills, and reputation score |
-| `/registry` | Live Solana agent registry with reputation rankings |
-| `/manifest` | OpenClaw-compatible skill manifest |
+| [`/`](https://ai-bot-project-lime.vercel.app) | Chat interface вЂ” query VANCE directly |
+| [`/agent`](https://ai-bot-project-lime.vercel.app/agent) | VANCE public identity, skills, and reputation score |
+| [`/registry`](https://ai-bot-project-lime.vercel.app/registry) | Live Solana agent registry with reputation rankings |
+| [`/manifest`](https://ai-bot-project-lime.vercel.app/manifest) | OpenClaw-compatible skill manifest |
+
+---
+
+## Architecture
+
+```
+  в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ
+  в”‚                       VANCE CORE                             в”‚
+  в”‚                                                              в”‚
+  в”‚   Human / External Agent / API call                          в”‚
+  в”‚               в”‚                                              в”‚
+  в”‚               в–ј                                              в”‚
+  в”‚     в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ                                  в”‚
+  в”‚     в”‚    Express Server   в”‚ в—„в”Ђв”Ђв”Ђ /manifest  (OpenClaw)       в”‚
+  в”‚     в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”¬в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”                                  в”‚
+  в”‚                в”‚                                             в”‚
+  в”‚       в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ґв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ                                    в”‚
+  в”‚       в”‚                 в”‚                                    в”‚
+  в”‚  в”Њв”Ђв”Ђв”Ђв”Ђв–јв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ    в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв–јв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ                            в”‚
+  в”‚  в”‚   AI     в”‚    в”‚   Solana    в”‚                             в”‚
+  в”‚  в”‚Processor в”‚    в”‚  Commands   в”‚                             в”‚
+  в”‚  в””в”Ђв”Ђв”Ђв”Ђв”¬в”Ђв”Ђв”Ђв”Ђв”Ђв”    в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”¬в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”                            в”‚
+  в”‚       в”‚                 в”‚                                    в”‚
+  в”‚  в”Њв”Ђв”Ђв”Ђв”Ђв–јв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ    в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв–јв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ                            в”‚
+  в”‚  в”‚ OpenAI   в”‚    в”‚ web3.js RPC в”‚                             в”‚
+  в”‚  в”‚ GPT-4o   в”‚    в”‚   Mainnet   в”‚                             в”‚
+  в”‚  в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”    в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”                            в”‚
+  в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”
+                          в”‚
+              в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”  runs every 30 min
+              в–ј
+  в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ
+  в”‚               AGENT SURVEILLANCE ENGINE                      в”‚
+  в”‚                                                              в”‚
+  в”‚  в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ     в”‚
+  в”‚  в”‚                 Background Crawler                  в”‚     в”‚
+  в”‚  в”‚                                                     в”‚     в”‚
+  в”‚  в”‚   в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ   в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ   в”‚     в”‚
+  в”‚  в”‚   в”‚   GitHub API    в”‚   в”‚    DexScreener API   в”‚   в”‚     в”‚
+  в”‚  в”‚   в”‚ commit history  в”‚   в”‚  token + vol signals в”‚   в”‚     в”‚
+  в”‚  в”‚   в”‚ last push date  в”‚   в”‚  on-chain activity   в”‚   в”‚     в”‚
+  в”‚  в”‚   в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”¬в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”   в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”¬в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”   в”‚     в”‚
+  в”‚  в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”јв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”јв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”     в”‚
+  в”‚               в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”¬в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”                      в”‚
+  в”‚                          в–ј                                   в”‚
+  в”‚  в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ    в”‚
+  в”‚  в”‚              Reputation Scoring Engine               в”‚    в”‚
+  в”‚  в”‚                                                      в”‚    в”‚
+  в”‚  в”‚    commit_score   +   onchain_score   +   protocol   в”‚    в”‚
+  в”‚  в”‚    в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ  в”‚    в”‚
+  в”‚  в”‚                    score:  0 вЂ“ 100                   в”‚    в”‚
+  в”‚  в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”¬в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”    в”‚
+  в”‚                             в–ј                                в”‚
+  в”‚  в”Њв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”ђ    в”‚
+  в”‚  в”‚                   Agent Registry                     в”‚    в”‚
+  в”‚  в”‚                                                      в”‚    в”‚
+  в”‚  в”‚   рџџў  Eliza          94 / 100   active               в”‚    в”‚
+  в”‚  в”‚   рџџў  Jito MEV       91 / 100   active               в”‚    в”‚
+  в”‚  в”‚   рџџў  GOAT           88 / 100   active               в”‚    в”‚
+  в”‚  в”‚   рџџў  Drift Keeper   82 / 100   active               в”‚    в”‚
+  в”‚  в”‚   рџџЎ  BonkBot        67 / 100   slow commits         в”‚    в”‚
+  в”‚  в”‚   рџ”ґ  [agent_n]      31 / 100   stale вЂ” flagged      в”‚    в”‚
+  в”‚  в”‚                                                      в”‚    в”‚
+  в”‚  в”‚        14 agents monitored В· updated every 30 min   в”‚    в”‚
+  в”‚  в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”    в”‚
+  в””в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”
+```
 
 ---
 
@@ -83,8 +164,8 @@ Next step:    one suggested follow-up action
 ## Quick Start
 
 ```bash
-git clone https://github.com/BureauAgent/BureauAgent
-cd BureauAgent
+git clone https://github.com/genis190/AGENT
+cd AGENT
 npm install
 cp .env.example .env
 # Add your OPENAI_API_KEY to .env
@@ -99,10 +180,10 @@ Server starts at `http://localhost:3000`
 
 | Variable | Required | Description |
 |---|---|---|
-| `OPENAI_API_KEY` | ✅ | OpenAI API key |
-| `AI_MODEL_NAME` | — | Model override (default: `gpt-4o-mini`) |
-| `AGENT_WALLET_PUBLIC` | — | VANCE on-chain wallet address |
-| `SOLANA_RPC_URL` | — | RPC endpoint (default: mainnet) |
+| `OPENAI_API_KEY` | вњ… | OpenAI API key |
+| `AI_MODEL_NAME` | вЂ” | Model override (default: `gpt-4o-mini`) |
+| `AGENT_WALLET_PUBLIC` | вЂ” | VANCE on-chain wallet address |
+| `SOLANA_RPC_URL` | вЂ” | RPC endpoint (default: mainnet) |
 | `GITHUB_TOKEN` | recommended | Raises rate limit to 5000 req/h |
 
 ---
@@ -120,7 +201,7 @@ src/
     index.ts             SAP Protocol core
     profile.ts           VANCE identity + reputation scoring
     registry.ts          Agent registry API
-    seed.ts              12 pre-seeded Solana agents
+    seed.ts              14 pre-seeded Solana agents
     skills.ts            Skill definitions and handlers
   bot/
     web.ts               Express server + route definitions
@@ -143,62 +224,6 @@ public/
 
 ---
 
-## Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        VANCE CORE                               │
-│                                                                 │
-│   User / External Agent                                         │
-│          │                                                      │
-│          ▼                                                      │
-│   [ Express Server ]  ◄──── /manifest (OpenClaw)               │
-│          │                                                      │
-│    ┌─────┴──────┐                                               │
-│    │            │                                               │
-│ [AI Processor]  [Solana Commands]                               │
-│    │                  │                                         │
-│ [OpenAI GPT]   [@solana/web3.js]                                │
-│                       │                                         │
-│                [Solana Mainnet RPC]                             │
-└─────────────────────────────────────────────────────────────────┘
-                         │
-                         │ every 30 min
-                         ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                   AGENT SURVEILLANCE ENGINE                     │
-│                                                                 │
-│   ┌──────────────────────────────────────────────────────┐     │
-│   │              Background Crawler                       │     │
-│   │   GitHub API ──► commit frequency, last activity     │     │
-│   │   DexScreener ─► on-chain token + volume signals     │     │
-│   └──────────────────────┬───────────────────────────────┘     │
-│                          │                                      │
-│                          ▼                                      │
-│   ┌──────────────────────────────────────────────────────┐     │
-│   │              Reputation Scoring Engine                │     │
-│   │   commit_score  +  onchain_score  +  protocol_score  │     │
-│   │   ─────────────────────────────────────────────────  │     │
-│   │                  total: 0 – 100                       │     │
-│   └──────────────────────┬───────────────────────────────┘     │
-│                          │                                      │
-│                          ▼                                      │
-│   ┌──────────────────────────────────────────────────────┐     │
-│   │                 Agent Registry                        │     │
-│   │                                                       │     │
-│   │   🟢 Eliza          94 / 100   active                │     │
-│   │   🟢 Jito MEV       91 / 100   active                │     │
-│   │   🟢 GOAT           88 / 100   active                │     │
-│   │   🟢 Drift Keeper   82 / 100   active                │     │
-│   │   🟡 BonkBot        67 / 100   slow                  │     │
-│   │   🔴 [agent_n]      31 / 100   stale                 │     │
-│   │   · · ·  12 agents total, updated every 30 min       │     │
-│   └──────────────────────────────────────────────────────┘     │
-└─────────────────────────────────────────────────────────────────┘
-```
-
----
-
 ## License
 
-MIT — built on Solana, powered by OpenAI, always on-chain.
+MIT вЂ” built on Solana, powered by OpenAI, always on-chain.
