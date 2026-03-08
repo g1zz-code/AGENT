@@ -146,21 +146,55 @@ public/
 ## Architecture
 
 ```
-User / External Agent
-        │
-        ▼
-  [ Express Server ]
-        │
-   ┌────┴────┐
-   │         │
-[ AI Processor ]   [ Solana Commands ]
-   │                     │
-[ OpenAI GPT ]    [ @solana/web3.js ]
+┌─────────────────────────────────────────────────────────────────┐
+│                        VANCE CORE                               │
+│                                                                 │
+│   User / External Agent                                         │
+│          │                                                      │
+│          ▼                                                      │
+│   [ Express Server ]  ◄──── /manifest (OpenClaw)               │
+│          │                                                      │
+│    ┌─────┴──────┐                                               │
+│    │            │                                               │
+│ [AI Processor]  [Solana Commands]                               │
+│    │                  │                                         │
+│ [OpenAI GPT]   [@solana/web3.js]                                │
+│                       │                                         │
+│                [Solana Mainnet RPC]                             │
+└─────────────────────────────────────────────────────────────────┘
                          │
-                  [ Mainnet RPC ]
-
-[ Background Crawler ] ──► [ GitHub API + DexScreener ]
-[ Agent Registry ]     ──► [ 12 agents, scored 0-100 ]
+                         │ every 30 min
+                         ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                   AGENT SURVEILLANCE ENGINE                     │
+│                                                                 │
+│   ┌──────────────────────────────────────────────────────┐     │
+│   │              Background Crawler                       │     │
+│   │   GitHub API ──► commit frequency, last activity     │     │
+│   │   DexScreener ─► on-chain token + volume signals     │     │
+│   └──────────────────────┬───────────────────────────────┘     │
+│                          │                                      │
+│                          ▼                                      │
+│   ┌──────────────────────────────────────────────────────┐     │
+│   │              Reputation Scoring Engine                │     │
+│   │   commit_score  +  onchain_score  +  protocol_score  │     │
+│   │   ─────────────────────────────────────────────────  │     │
+│   │                  total: 0 – 100                       │     │
+│   └──────────────────────┬───────────────────────────────┘     │
+│                          │                                      │
+│                          ▼                                      │
+│   ┌──────────────────────────────────────────────────────┐     │
+│   │                 Agent Registry                        │     │
+│   │                                                       │     │
+│   │   🟢 Eliza          94 / 100   active                │     │
+│   │   🟢 Jito MEV       91 / 100   active                │     │
+│   │   🟢 GOAT           88 / 100   active                │     │
+│   │   🟢 Drift Keeper   82 / 100   active                │     │
+│   │   🟡 BonkBot        67 / 100   slow                  │     │
+│   │   🔴 [agent_n]      31 / 100   stale                 │     │
+│   │   · · ·  12 agents total, updated every 30 min       │     │
+│   └──────────────────────────────────────────────────────┘     │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
