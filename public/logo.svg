@@ -1,36 +1,54 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <rect width="200" height="200" fill="#050505"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
-    <path id="ringPath" d="M100,14 a86,86 0 1,1 -0.01,0"/>
-    <clipPath id="chartClip"><circle cx="100" cy="100" r="60"/></clipPath>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a0010"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <circle cx="100" cy="100" r="88" fill="none" stroke="#7ec8e3" stroke-width="1.2" opacity="0.5"/>
-  <circle cx="100" cy="100" r="78" fill="none" stroke="#7ec8e3" stroke-width="0.6" opacity="0.25"/>
-  <text font-family="monospace" font-size="6.5" fill="#7ec8e3" letter-spacing="1.1" opacity="0.85">
-    <textPath href="#ringPath">01010101010101010101010101010101010101010101010101010101010101010101011010101010101010101010101</textPath>
-  </text>
-  <text x="4" y="112" font-family="monospace" font-size="36" font-weight="700" fill="#7ec8e3" opacity="0.9">&lt;</text>
-  <text x="155" y="112" font-family="monospace" font-size="36" font-weight="700" fill="#7ec8e3" opacity="0.9">&gt;</text>
-  <circle cx="100" cy="100" r="66" fill="#07121a"/>
-  <circle cx="100" cy="100" r="66" fill="none" stroke="#7ec8e3" stroke-width="1.5"/>
-  <g clip-path="url(#chartClip)">
-    <ellipse cx="100" cy="108" rx="54" ry="38" fill="#0d2030" opacity="0.7"/>
-    <line x1="54"  y1="88"  x2="54"  y2="122" stroke="#7ec8e3" stroke-width="1.3"/>
-    <line x1="68"  y1="80"  x2="68"  y2="112" stroke="#7ec8e3" stroke-width="1.3"/>
-    <line x1="82"  y1="86"  x2="82"  y2="120" stroke="#7ec8e3" stroke-width="1.3"/>
-    <line x1="96"  y1="76"  x2="96"  y2="114" stroke="#7ec8e3" stroke-width="1.3"/>
-    <line x1="110" y1="84"  x2="110" y2="118" stroke="#7ec8e3" stroke-width="1.3"/>
-    <line x1="124" y1="90"  x2="124" y2="124" stroke="#7ec8e3" stroke-width="1.3"/>
-    <line x1="138" y1="86"  x2="138" y2="118" stroke="#7ec8e3" stroke-width="1.3"/>
-    <rect x="50"  y="95"  width="8" height="16" fill="#7ec8e3" rx="1"/>
-    <rect x="64"  y="87"  width="8" height="14" fill="#7ec8e3" rx="1"/>
-    <rect x="78"  y="92"  width="8" height="18" fill="none" stroke="#7ec8e3" stroke-width="1.2" rx="1"/>
-    <rect x="92"  y="84"  width="8" height="16" fill="#7ec8e3" rx="1"/>
-    <rect x="106" y="91"  width="8" height="18" fill="none" stroke="#7ec8e3" stroke-width="1.2" rx="1"/>
-    <rect x="120" y="96"  width="8" height="16" fill="#7ec8e3" rx="1"/>
-    <rect x="134" y="90"  width="8" height="16" fill="#7ec8e3" rx="1"/>
-    <polyline points="54,103 68,94 82,101 96,92 110,100 124,104 138,98"
-      fill="none" stroke="#7ec8e3" stroke-width="1.6"
-      stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-  </g>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="98" fill="url(#bgGrad)" stroke="#f472b6" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="88" fill="none" stroke="url(#pinkGrad)" stroke-width="1" stroke-dasharray="4 6" opacity="0.5"/>
+
+  <!-- Eye / lens shape -->
+  <ellipse cx="100" cy="100" rx="40" ry="24" fill="none" stroke="#f472b6" stroke-width="1.5" filter="url(#glow)" opacity="0.9"/>
+  <ellipse cx="100" cy="100" rx="40" ry="24" fill="none" stroke="#f472b6" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Iris -->
+  <circle cx="100" cy="100" r="13" fill="none" stroke="url(#pinkGrad)" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Pupil -->
+  <circle cx="100" cy="100" r="5" fill="#f472b6" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Scan lines through eye -->
+  <line x1="62" y1="100" x2="78" y2="100" stroke="#f472b6" stroke-width="0.8" opacity="0.5"/>
+  <line x1="122" y1="100" x2="138" y2="100" stroke="#f472b6" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Corner brackets -->
+  <path d="M30 30 L30 45 M30 30 L45 30" stroke="#f472b6" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M170 30 L170 45 M170 30 L155 30" stroke="#f472b6" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M30 170 L30 155 M30 170 L45 170" stroke="#f472b6" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M170 170 L170 155 M170 170 L155 170" stroke="#f472b6" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- DESCU text -->
+  <text x="100" y="148" font-family="'Courier New', monospace" font-size="18" font-weight="700"
+    fill="url(#pinkGrad)" text-anchor="middle" letter-spacing="6" filter="url(#glow)">DESCU</text>
+
+  <!-- Agent subtext -->
+  <text x="100" y="162" font-family="'Courier New', monospace" font-size="7"
+    fill="#f472b6" text-anchor="middle" letter-spacing="3" opacity="0.6">AGENT</text>
+
+  <!-- Top label -->
+  <text x="100" y="60" font-family="'Courier New', monospace" font-size="6"
+    fill="#f472b6" text-anchor="middle" letter-spacing="2" opacity="0.45">SURVEILLANCE · v1.0</text>
 </svg>

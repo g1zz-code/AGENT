@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANOPTIA | Autonomous On-Chain AI Agent</title>
+    <title>DESCU Agent | Autonomous On-Chain AI Agent</title>
     <link rel="icon" href="/logo.svg" type="image/svg+xml">
     <style>
         *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
         :root {
-            --accent:       #00d4ff;
-            --accent-2:     #7c3aed;
-            --accent-glow:  rgba(0,212,255,0.15);
+            --accent:       #f472b6;
+            --accent-2:     #db2777;
+            --accent-glow:  rgba(244,114,182,0.15);
             --bg:           #020206;
             --bg-card:      rgba(255,255,255,0.025);
             --bg-card-h:    rgba(255,255,255,0.05);
@@ -21,7 +21,7 @@
             --text-muted:   rgba(240,240,244,0.5);
             --text-dim:     rgba(240,240,244,0.22);
             --border:       rgba(255,255,255,0.06);
-            --border-a:     rgba(0,212,255,0.18);
+            --border-a:     rgba(244,114,182,0.18);
         }
 
         html { scroll-behavior: auto; }
@@ -57,19 +57,19 @@
         }
         .orb-1 {
             width: 700px; height: 700px;
-            background: radial-gradient(circle, rgba(0,212,255,0.055) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(244,114,182,0.055) 0%, transparent 70%);
             top: -250px; left: -200px;
             animation: o1 22s ease-in-out infinite;
         }
         .orb-2 {
             width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(124,58,237,0.05) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(219,39,119,0.05) 0%, transparent 70%);
             bottom: -80px; right: -80px;
             animation: o2 28s ease-in-out infinite;
         }
         .orb-3 {
             width: 350px; height: 350px;
-            background: radial-gradient(circle, rgba(0,212,255,0.035) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(244,114,182,0.035) 0%, transparent 70%);
             top: 55%; left: 55%;
             animation: o3 35s ease-in-out infinite;
         }
@@ -80,8 +80,8 @@
         .grid-bg {
             position: fixed; inset: 0; z-index: 0; pointer-events: none;
             background-image:
-                linear-gradient(rgba(0,212,255,0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,212,255,0.025) 1px, transparent 1px);
+                linear-gradient(rgba(244,114,182,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(244,114,182,0.025) 1px, transparent 1px);
             background-size: 80px 80px;
             mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, black 0%, transparent 100%);
         }
@@ -132,7 +132,7 @@
         }
         .cta-btn:hover {
             transform: scale(1.04) translateY(-1px);
-            box-shadow: 0 0 24px rgba(0,212,255,0.45), 0 4px 16px rgba(0,0,0,0.3);
+            box-shadow: 0 0 24px rgba(244,114,182,0.45), 0 4px 16px rgba(0,0,0,0.3);
         }
 
         /* ── MAIN ── */
@@ -150,8 +150,8 @@
         .hero-badge {
             display: inline-flex; align-items: center; gap: 8px;
             padding: 6px 14px;
-            background: rgba(0,212,255,0.07);
-            border: 1px solid rgba(0,212,255,0.2);
+            background: rgba(244,114,182,0.07);
+            border: 1px solid rgba(244,114,182,0.2);
             border-radius: 100px;
             font-size: 11px; font-weight: 600;
             letter-spacing: 0.06em; text-transform: uppercase;
@@ -203,7 +203,7 @@
         }
         .btn-primary:hover {
             transform: scale(1.03) translateY(-2px);
-            box-shadow: 0 0 32px rgba(0,212,255,0.55), 0 8px 24px rgba(0,0,0,0.3);
+            box-shadow: 0 0 32px rgba(244,114,182,0.55), 0 8px 24px rgba(0,0,0,0.3);
         }
         .btn-primary:active { transform: scale(0.97); }
 
@@ -246,7 +246,7 @@
         .section-header { text-align: center; margin-bottom: 64px; }
         .s-tag {
             display: inline-block; padding: 5px 12px;
-            background: rgba(0,212,255,0.06); border: 1px solid rgba(0,212,255,0.14);
+            background: rgba(244,114,182,0.06); border: 1px solid rgba(244,114,182,0.14);
             border-radius: 100px; font-size: 11px; font-weight: 600;
             text-transform: uppercase; letter-spacing: 0.08em;
             color: var(--accent); margin-bottom: 18px;
@@ -287,7 +287,7 @@
         }
         .feature-card::before {
             content: ''; position: absolute; inset: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(0,212,255,0.07) 0%, transparent 65%);
+            background: radial-gradient(circle at 50% 0%, rgba(244,114,182,0.07) 0%, transparent 65%);
             opacity: 0; transition: opacity 0.4s;
         }
         .feature-card::after {
@@ -299,15 +299,15 @@
         .feature-card:hover::before { opacity: 1; }
         .feature-card:hover::after  { opacity: 1; }
         .feature-card:hover .fi {
-            background: rgba(0,212,255,0.14);
-            border-color: rgba(0,212,255,0.3);
-            box-shadow: 0 0 22px rgba(0,212,255,0.2);
+            background: rgba(244,114,182,0.14);
+            border-color: rgba(244,114,182,0.3);
+            box-shadow: 0 0 22px rgba(244,114,182,0.2);
         }
         .fi {
             width: 44px; height: 44px;
             display: flex; align-items: center; justify-content: center;
-            background: rgba(0,212,255,0.07);
-            border: 1px solid rgba(0,212,255,0.12);
+            background: rgba(244,114,182,0.07);
+            border: 1px solid rgba(244,114,182,0.12);
             border-radius: 12px; margin-bottom: 22px;
             transition: all 0.3s;
         }
@@ -332,7 +332,7 @@
         .spec-item::after {
             content: ''; position: absolute; bottom: 0; left: 50%;
             transform: translateX(-50%); width: 40%; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0,212,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(244,114,182,0.3), transparent);
             opacity: 0; transition: opacity 0.3s;
         }
         .spec-item:hover { background: var(--bg-card-h); }
@@ -362,9 +362,9 @@
         }
         .code-block::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0,212,255,0.28), transparent);
+            background: linear-gradient(90deg, transparent, rgba(244,114,182,0.28), transparent);
         }
-        .kw { color: #c084fc; }
+        .kw { color: #fbb6ce; }
         .str { color: #86efac; }
         .cmt { color: var(--text-dim); }
 
@@ -391,7 +391,7 @@
             transition: all 0.15s; display: flex; align-items: center;
             margin-bottom: 2px; gap: 7px; font-weight: 500;
         }
-        .qa:hover { background: rgba(0,212,255,0.06); color: var(--text); }
+        .qa:hover { background: rgba(244,114,182,0.06); color: var(--text); }
         .qa svg { opacity: 0.5; flex-shrink: 0; stroke: currentColor; }
         .qa:hover svg { opacity: 1; stroke: var(--accent); }
 
@@ -419,8 +419,8 @@
             padding: 11px 15px; border-radius: 12px;
         }
         .user .message-content {
-            background: rgba(0,212,255,0.09);
-            border: 1px solid rgba(0,212,255,0.2);
+            background: rgba(244,114,182,0.09);
+            border: 1px solid rgba(244,114,182,0.2);
             text-align: right;
         }
         .assistant .message-content {
@@ -433,10 +433,10 @@
         .agent-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
         .agent-badge {
             padding: 3px 10px;
-            background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15);
+            background: rgba(244,114,182,0.08); border: 1px solid rgba(244,114,182,0.15);
             border-radius: 100px; font-size: 11px; font-weight: 600; color: var(--accent);
         }
-        .agent-badge.intent { background: rgba(124,58,237,0.09); border-color: rgba(124,58,237,0.2); color: #c084fc; }
+        .agent-badge.intent { background: rgba(219,39,119,0.09); border-color: rgba(219,39,119,0.2); color: #fbb6ce; }
         .agent-summary { margin-bottom: 10px; }
         .agent-next { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
         .agent-json-toggle {
@@ -476,13 +476,13 @@
             transition: border-color 0.2s;
         }
         .input-area input::placeholder { color: var(--text-dim); }
-        .input-area input:focus { border-color: rgba(0,212,255,0.3); }
+        .input-area input:focus { border-color: rgba(244,114,182,0.3); }
         .input-area button {
             padding: 10px 22px; background: var(--accent); border: none;
             border-radius: 10px; color: #000; font-size: 14px; font-weight: 600;
             cursor: pointer; transition: all 0.2s;
         }
-        .input-area button:hover { box-shadow: 0 0 18px rgba(0,212,255,0.45); transform: translateY(-1px); }
+        .input-area button:hover { box-shadow: 0 0 18px rgba(244,114,182,0.45); transform: translateY(-1px); }
         .input-area button:disabled { opacity: 0.35; cursor: not-allowed; transform: none; box-shadow: none; }
 
         /* ── FOOTER ── */
@@ -504,7 +504,7 @@
             resize: none; outline: none; font-family: inherit;
             line-height: 1.5; height: 70px; margin-bottom: 6px;
         }
-        #tweetText:focus { border-color: rgba(0,212,255,0.3); }
+        #tweetText:focus { border-color: rgba(244,114,182,0.3); }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 1024px) {
@@ -537,8 +537,8 @@
 
     <header class="header" id="mainHeader">
         <a class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-            <img src="/logo.svg" alt="PANOPTIA">
-            <span class="logo-name">PANOPTIA</span>
+            <img src="/logo.svg" alt="DESCU Agent">
+            <span class="logo-name">DESCU Agent</span>
         </a>
         <nav class="nav">
             <a onclick="scrollToSection('features')">Protocol</a>
@@ -672,7 +672,7 @@
             <div class="section-header reveal">
                 <div class="s-tag">Interactive Demo</div>
                 <h2 class="s-title">Try It Now</h2>
-                <p class="s-desc">Interact with PANOPTIA. Ask about wallets, tokens, or network status.</p>
+                <p class="s-desc">Interact with DESCU Agent. Ask about wallets, tokens, or network status.</p>
             </div>
             <div class="chat-container reveal">
                 <div class="chat-sidebar">
@@ -720,7 +720,7 @@
     </main>
 
     <footer class="z1">
-        <p>© 2026 PANOPTIA. Built on Solana blockchain.</p>
+        <p>© 2026 DESCU Agent. Built on Solana blockchain.</p>
         <div class="footer-links">
             <a href="#" onclick="return false;">Documentation</a>
             <a href="https://github.com/BureauAgent/BureauAgent" target="_blank">GitHub</a>
@@ -792,7 +792,7 @@
             draw() {
                 cx.beginPath();
                 cx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-                cx.fillStyle = 'rgba(0,212,255,' + this.a + ')';
+                cx.fillStyle = 'rgba(244,114,182,' + this.a + ')';
                 cx.fill();
             }
         }
@@ -805,7 +805,7 @@
                     const d = Math.sqrt(dx*dx + dy*dy);
                     if (d < D) {
                         cx.beginPath();
-                        cx.strokeStyle = 'rgba(0,212,255,' + ((1 - d/D) * 0.1) + ')';
+                        cx.strokeStyle = 'rgba(244,114,182,' + ((1 - d/D) * 0.1) + ')';
                         cx.lineWidth = 0.5;
                         cx.moveTo(PTS[i].x, PTS[i].y);
                         cx.lineTo(PTS[j].x, PTS[j].y);
