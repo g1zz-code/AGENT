@@ -1,235 +1,313 @@
 <div align="center">
-  
+
+<img src="./public/banner.png" alt="NODELING AGENT banner" width="100%"/>
+
 </div>
 
 <div align="center">
 
-# DESCU -- Autonomous On-Chain AI Agent
+# ◈ NODELING AGENT
 
-**P**rotocol  *  **A**nalysis  *  **N**etwork  *  **O**bserver  *  **P**ersistent  *  **T**racking  *  **I**ntelligence  *  **A**gent
+### *by Mike drop*
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-DESCU.vercel.app-f472b6?style=for-the-badge)](https://descu.tech)
-[![Agent Registry](https://img.shields.io/badge/Registry-12_Agents_Live-f472b6?style=for-the-badge)](https://descu.tech/registry)
-[![Agent Profile](https://img.shields.io/badge/Agent_Profile-DESCU-deeppink?style=for-the-badge)](https://descu.tech/agent)
+**N**eural  ·  **O**n-chain  ·  **D**ecentralized  ·  **E**xecution  ·  **L**ayer  ·  **I**ntelligence  ·  **N**etwork  ·  **G**rid
 
-[![Solana](https://img.shields.io/badge/Chain-Solana_Mainnet-f472b6?style=flat-square&logo=solana)](https://solana.com)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
-[![Grok](https://img.shields.io/badge/AI-Grok_3-000000?style=flat-square&logo=xing)](https://x.ai)
-[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com)
+<br/>
+
+[![Live Demo](https://img.shields.io/badge/◈_LIVE-NODELING.vercel.app-a855f7?style=for-the-badge&labelColor=0d0d0d)](https://descu.tech)
+[![Agent Registry](https://img.shields.io/badge/REGISTRY-12_Agents_Online-6366f1?style=for-the-badge&labelColor=0d0d0d)](https://descu.tech/registry)
+[![Agent Profile](https://img.shields.io/badge/AGENT-NODELING_ID-8b5cf6?style=for-the-badge&labelColor=0d0d0d)](https://descu.tech/agent)
+
+<br/>
+
+[![Solana](https://img.shields.io/badge/Solana-Mainnet-9945FF?style=flat-square&logo=solana&logoColor=white)](https://solana.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Grok](https://img.shields.io/badge/AI_Core-Grok_3-ffffff?style=flat-square&logo=xing&logoColor=black)](https://x.ai)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com)
 [![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](./LICENSE)
+[![Status](https://img.shields.io/badge/Status-ACTIVE-00ff88?style=flat-square&labelColor=0d0d0d)](#)
+
+</div>
+
+<br/>
+
+<div align="center">
+
+```
+  ██████████████████████████████████████████████████████████
+  ██                                                      ██
+  ██    NODELING AGENT  ·  SAP v1  ·  SOLANA MAINNET     ██
+  ██    autonomous • on-chain • always watching           ██
+  ██                                                      ██
+  ██████████████████████████████████████████████████████████
+```
 
 </div>
 
 ---
 
-DESCU is an autonomous AI agent deployed on the Solana blockchain. It monitors on-chain activity in real time, tracks AI agent reputation across the Solana ecosystem, answers blockchain queries, and communicates in structured `AGENT_SPEC` format -- readable by both humans and machines.
+> **NODELING** is a fully autonomous AI agent living on-chain. It reads the blockchain in real time, tracks AI agent reputation across the Solana ecosystem, responds to queries in structured `AGENT_SPEC` format, and never sleeps. Built by **Mike drop**.
 
 ---
 
-## Identity
+## ◈ Neural Identity
 
-```
-agent_id      : DESCU
-agent_name    : DESCU
-agent_version : 1.0.0
-wallet        : DbzFutGThzbMNaDyqvdzWugdZuhnaqtWyfD9qp9GZRRV
-status        : active
-protocol      : Solana Agent Protocol (SAP v1)
-```
+<div align="center">
 
-> [Verify on Solscan](https://solscan.io/account/DbzFutGThzbMNaDyqvdzWugdZuhnaqtWyfD9qp9GZRRV)
+| Field | Value |
+|:---|:---|
+| `agent_id` | `NODELING` |
+| `version` | `1.0.0` |
+| `wallet` | `DbzFutGThzbMNaDyqvdzWugdZuhnaqtWyfD9qp9GZRRV` |
+| `status` | `● ACTIVE` |
+| `protocol` | `Solana Agent Protocol  ·  SAP v1` |
+| `ai_core` | `xAI Grok 3` |
+| `uptime` | `∞ serverless` |
 
----
+</div>
 
-## Capabilities
-
-| Skill | Description |
-|---|---|
-| `balance_checker` | SOL + SPL token balances for any wallet address |
-| `price_monitor` | Real-time token prices via CoinGecko (SOL, USDC, BONK, JUP) |
-| `transaction_analyzer` | Full transaction history by wallet address or signature |
-| `network_status` | Solana mainnet health -- current slot, TPS, validator status |
-
-**Agent Registry** -- DESCU monitors 12 active Solana protocol agents. GitHub activity is crawled every 30 minutes. Each agent receives a reputation score from 0 to 100 based on commit frequency, on-chain activity, and protocol compliance.
-
-**OpenClaw compatible** -- `/manifest` exposes DESCU skills in machine-readable format for direct agent-to-agent integration.
+> [Verify on-chain via Solscan ↗](https://solscan.io/account/DbzFutGThzbMNaDyqvdzWugdZuhnaqtWyfD9qp9GZRRV)
 
 ---
 
-## Response Format (AGENT_SPEC v1)
+## ◈ Skill Matrix
 
-Every response follows a strict structured format:
+<div align="center">
+
+| Skill | Trigger | Source | Latency |
+|:---|:---|:---|:---|
+| `balance_checker` | wallet address | Solana RPC | ~120ms |
+| `price_monitor` | token symbol | CoinGecko | ~200ms |
+| `transaction_analyzer` | tx sig / wallet | Solana RPC | ~300ms |
+| `network_status` | `status` / `tps` | Solana RPC | ~80ms |
+| `agent_registry` | `registry` / `rank` | GitHub crawler | cached |
+| `reputation_score` | agent name | Scorer engine | cached |
+
+</div>
+
+**OpenClaw compatible** — `/manifest` exposes all skills in machine-readable format for agent-to-agent invocation.
+
+**Surveillance** — 12 Solana protocol agents are crawled every 30 minutes. Reputation scores are computed from commit frequency, on-chain activity, and protocol compliance.
+
+---
+
+## ◈ Architecture
 
 ```
-Intent:       parsed understanding of the query
-Assumptions:  defaults and inferences applied
-Summary:      human-readable answer
-Result JSON:  structured machine-readable output
-Next step:    one suggested follow-up action
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║                     ◈  NODELING AGENT  CORE                         ║
+║                                                                      ║
+║   ┌─────────────────────────────────────────────────────────────┐   ║
+║   │              INGRESS  ·  REQUEST ROUTER                     │   ║
+║   │                                                             │   ║
+║   │   Browser ──┐                                               │   ║
+║   │   API Key ──┼──► Express Server  ◄── /manifest (OpenClaw)  │   ║
+║   │   AI Agent ─┘         │                                     │   ║
+║   └───────────────────────┼─────────────────────────────────────┘   ║
+║                           │                                          ║
+║           ┌───────────────┴────────────────┐                        ║
+║           │                                │                        ║
+║   ┌───────▼────────┐              ┌────────▼────────┐               ║
+║   │  AGENT_SPEC    │              │  SKILL ROUTER   │               ║
+║   │  Prompt Engine │              │  intent parser  │               ║
+║   └───────┬────────┘              └────────┬────────┘               ║
+║           │                                │                        ║
+║     ┌─────▼──────┐           ┌─────────────┴────────────┐           ║
+║     │  xAI Grok 3│           │                          │           ║
+║     │  AI  Core  │    ┌──────▼──────┐          ┌────────▼──────┐    ║
+║     └────────────┘    │   Solana    │          │   Reputation  │    ║
+║                       │  Commands   │          │     Scorer    │    ║
+║                       └──────┬──────┘          └────────┬──────┘    ║
+║                              │                          │           ║
+║                    ┌─────────▼──────┐       ┌───────────▼──────┐    ║
+║                    │  web3.js RPC   │       │  Registry Cache  │    ║
+║                    │  Mainnet       │       │  12 agents live  │    ║
+║                    └────────────────┘       └──────────────────┘    ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+                                  │
+                     ┌────────────▼────────────┐
+                     │   SURVEILLANCE ENGINE   │
+                     │   runs every  30  min   │
+                     └────────────┬────────────┘
+                                  │
+          ┌───────────────────────┼───────────────────────┐
+          │                       │                       │
+ ┌────────▼────────┐   ┌──────────▼──────────┐  ┌────────▼────────┐
+ │   GitHub API    │   │   DexScreener API   │  │  Solana RPC     │
+ │  commit history │   │  token vol signals  │  │  wallet watch   │
+ │  push activity  │   │  on-chain txns      │  │  slot monitor   │
+ └────────┬────────┘   └──────────┬──────────┘  └────────┬────────┘
+          └───────────────────────┼───────────────────────┘
+                                  │
+                     ┌────────────▼────────────┐
+                     │   REPUTATION SCORER     │
+                     │                         │
+                     │   commit_score   × 0.4  │
+                     │ + onchain_score  × 0.4  │
+                     │ + protocol_score × 0.2  │
+                     │   ─────────────────────  │
+                     │      SCORE  :  0─100     │
+                     └────────────┬────────────┘
+                                  │
+          ╔═══════════════════════▼═════════════════════════╗
+          ║               AGENT  REGISTRY                   ║
+          ║                                                  ║
+          ║  ████  elizaOS/eliza              97 ▓▓▓▓▓▓▓▓▓  ║
+          ║  ████  jito-foundation/jito-sol   95 ▓▓▓▓▓▓▓▓▓  ║
+          ║  ████  orca-so/whirlpools         91 ▓▓▓▓▓▓▓▓░  ║
+          ║  ████  raydium-io/raydium-sdk     89 ▓▓▓▓▓▓▓▓░  ║
+          ║  ████  drift-labs/protocol-v2     87 ▓▓▓▓▓▓▓░░  ║
+          ║  ████  mrgnlabs/marginfi-v2       83 ▓▓▓▓▓▓▓░░  ║
+          ║  ████  MeteoraAg/meteora-ag       79 ▓▓▓▓▓▓░░░  ║
+          ║  ████  helius-labs/helius-sdk     77 ▓▓▓▓▓▓░░░  ║
+          ║  ░░░░  tensor-oss/tensorswap      74 ▓▓▓▓▓░░░░  ║
+          ║  ░░░░  kamino-finance/klend-sdk   71 ▓▓▓▓▓░░░░  ║
+          ║  ~~~~  goat-sdk/goat              63 ▓▓▓▓░░░░░  ║
+          ║  ~~~~  pyth-network/pyth-solana   58 ▓▓▓▓░░░░░  ║
+          ║                                                  ║
+          ║  12 agents tracked  ·  refresh: every 30 min   ║
+          ╚══════════════════════════════════════════════════╝
 ```
 
 ---
 
-## Interface
+## ◈ Response Format — AGENT_SPEC v1
 
-| Route | Description |
-|---|---|
-| [`/`](https://descu.tech) | Chat interface -- query DESCU directly |
-| [`/agent`](https://descu.tech/agent) | DESCU public identity, skills, and reputation score |
-| [`/registry`](https://descu.tech/registry) | Live Solana agent registry with reputation rankings |
+Every NODELING response is machine-parseable and human-readable:
+
+```
+╭─ NODELING RESPONSE ──────────────────────────────────────────╮
+│                                                               │
+│  Intent      →  parsed understanding of the query            │
+│  Assumptions →  defaults and inferences applied              │
+│  Summary     →  human-readable answer                        │
+│  Result JSON →  structured machine-readable output           │
+│  Next step   →  one suggested follow-up action               │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+```
+
+---
+
+## ◈ Live Interfaces
+
+<div align="center">
+
+| Route | What it does |
+|:---|:---|
+| [`/`](https://descu.tech) | Chat interface — query NODELING directly |
+| [`/agent`](https://descu.tech/agent) | Public identity, skills, and reputation dashboard |
+| [`/registry`](https://descu.tech/registry) | Live agent registry with reputation rankings |
 | [`/manifest`](https://descu.tech/manifest) | OpenClaw-compatible skill manifest |
 
----
-
-## Architecture
-
-```
-+------------------------------------------------------------------+
-|                       DESCU CORE                              |
-|                                                                  |
-|  User / External Agent / API call                                |
-|                   |                                              |
-|                   v                                              |
-|       +-----------------------+                                  |
-|       |    Express Server     | <--- /manifest  (OpenClaw)       |
-|       +----------+------------+                                  |
-|                  |                                               |
-|         +--------+--------+                                      |
-|         |                 |                                      |
-|    +----v-----+    +------v------+                               |
-|    |    AI    |    |   Solana    |                               |
-|    |Processor |    |  Commands   |                               |
-|    +----+-----+    +------+------+                               |
-|         |                 |                                      |
-|    +----v-----+    +------v------+                               |
-|    |  x.ai    |    | web3.js RPC |                               |
-|    |  Grok 3  |    |   Mainnet   |                               |
-|    +----------+    +-------------+                               |
-+------------------------------------------------------------------+
-                          |
-                          |  runs every 30 min
-                          v
-+------------------------------------------------------------------+
-|                 AGENT SURVEILLANCE ENGINE                        |
-|                                                                  |
-|  +------------------------------------------------------------+  |
-|  |                   Background Crawler                       |  |
-|  |                                                            |  |
-|  |   +-------------------+     +---------------------+       |  |
-|  |   |    GitHub API     |     |   DexScreener API   |       |  |
-|  |   |  commit history   |     | token + vol signals |       |  |
-|  |   |  last push date   |     |  on-chain activity  |       |  |
-|  |   +---------+---------+     +-----------+---------+       |  |
-|  +-----------+--------------------------+--+------------------+  |
-|              +-------------+-----------+                        |
-|                            v                                    |
-|  +------------------------------------------------------------+  |
-|  |              Reputation Scoring Engine                     |  |
-|  |                                                            |  |
-|  |   commit_score  +  onchain_score  +  protocol_score       |  |
-|  |   --------------------------------------------------------  |  |
-|  |                      score: 0 - 100                       |  |
-|  +--------------------------+---------------------------------+  |
-|                             v                                   |
-|  +------------------------------------------------------------+  |
-|  |                     Agent Registry                         |  |
-|  |                                                            |  |
-|  |  [**] elizaOS/eliza              97/100  active            |  |
-|  |  [**] jito-foundation/jito-sol   95/100  active            |  |
-|  |  [**] orca-so/whirlpools         91/100  active            |  |
-|  |  [**] raydium-io/raydium-sdk     89/100  active            |  |
-|  |  [**] drift-labs/protocol-v2     87/100  active            |  |
-|  |  [**] mrgnlabs/marginfi-v2       83/100  active            |  |
-|  |  [**] MeteoraAg/meteora-ag       79/100  active            |  |
-|  |  [**] helius-labs/helius-sdk     77/100  active            |  |
-|  |  [--] tensor-oss/tensorswap      74/100  active            |  |
-|  |  [--] kamino-finance/klend-sdk   71/100  active            |  |
-|  |  [~~] goat-sdk/goat              63/100  slow commits      |  |
-|  |  [~~] pyth-network/pyth-solana   58/100  slow commits      |  |
-|  |                                                            |  |
-|  |     12 agents tracked  --  updated every 30 min           |  |
-|  +------------------------------------------------------------+  |
-+------------------------------------------------------------------+
-```
+</div>
 
 ---
 
-## Stack
+## ◈ Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Runtime | Node.js 20 + TypeScript |
-| AI Model | xAI Grok 3 |
-| Blockchain | Solana mainnet via `@solana/web3.js` |
-| Market Data | DexScreener, CoinGecko |
-| Agent Data | GitHub API (repo activity crawler) |
-| Deploy | Vercel serverless functions |
+<div align="center">
+
+| Layer | Technology | Role |
+|:---|:---|:---|
+| Runtime | `Node.js 20` + TypeScript | Server execution |
+| AI Core | `xAI Grok 3` | Intelligence engine |
+| Blockchain | `@solana/web3.js` · Mainnet | On-chain data |
+| Market Feed | DexScreener · CoinGecko | Price signals |
+| Agent Intel | GitHub API crawler | Repo activity tracking |
+| Deploy | Vercel serverless | Edge distribution |
+| Protocol | SAP v1 · OpenClaw | Agent interop |
+
+</div>
 
 ---
 
-## Quick Start
+## ◈ Quick Start
 
 ```bash
-git clone https://github.com/4ll4ncrypto/AGENT
+git clone https://github.com/g1zz-code/AGENT
 cd AGENT
 npm install
 cp .env.example .env
-# Add your XAI_API_KEY to .env
+# Fill in your XAI_API_KEY
 npm run dev
 ```
 
-Server starts at `http://localhost:3000`
+```
+◈ NODELING online at http://localhost:3000
+```
 
 ---
 
-## Environment Variables
+## ◈ Environment Variables
+
+<div align="center">
 
 | Variable | Required | Description |
-|---|---|---|
-| `XAI_API_KEY` | yes | xAI Grok API key |
-| `AI_MODEL_NAME` | no | Model override (default: `grok-3`) |
-| `AGENT_WALLET_PUBLIC` | no | DESCU on-chain wallet address |
-| `SOLANA_RPC_URL` | no | RPC endpoint (default: mainnet) |
-| `GITHUB_TOKEN` | recommended | Raises rate limit to 5000 req/h |
+|:---|:---:|:---|
+| `XAI_API_KEY` | ✅ | xAI Grok API key |
+| `AI_MODEL_NAME` | ➖ | Model override (default: `grok-3`) |
+| `AGENT_WALLET_PUBLIC` | ➖ | On-chain wallet address |
+| `SOLANA_RPC_URL` | ➖ | RPC endpoint (default: mainnet) |
+| `GITHUB_TOKEN` | ⚡ | Raises rate limit to 5 000 req/h |
+
+</div>
 
 ---
 
-## Project Structure
+## ◈ Project Structure
 
 ```
-api/
-  index.ts               Vercel serverless entry point
-src/
-  ai/
-    model.ts             xAI Grok adapter with fallback support
-    processor.ts         AGENT_SPEC prompt engine + skill router
-  agent-protocol/
-    index.ts             SAP Protocol core
-    profile.ts           DESCU identity + reputation scoring
-    registry.ts          Agent registry API
-    seed.ts              12 pre-seeded Solana agents
-    skills.ts            Skill definitions and handlers
-  bot/
-    web.ts               Express server + route definitions
-  config/
-    index.ts             Environment config loader
-  monitor/
-    crawler.ts           30-min GitHub + DexScreener crawler
-    dexscreener.ts       Token price fetcher
-    github.ts            GitHub API client
-  solana/
-    agent.ts             Solana RPC wrapper
-    commands.ts          Blockchain command handlers
-public/
-  index.html             Chat UI
-  agent.html             Agent profile page
-  registry.html          Agent registry
-  manifest.html          OpenClaw skill manifest
-  logo.svg               DESCU logo
+NODELING AGENT
+│
+├── api/
+│   └── index.ts              ← Vercel serverless entry point
+│
+├── src/
+│   ├── ai/
+│   │   ├── model.ts          ← xAI Grok 3 adapter + fallback
+│   │   └── processor.ts      ← AGENT_SPEC prompt engine + skill router
+│   │
+│   ├── agent-protocol/
+│   │   ├── index.ts          ← SAP Protocol core
+│   │   ├── profile.ts        ← Agent identity + reputation
+│   │   ├── registry.ts       ← Agent registry API
+│   │   ├── seed.ts           ← 12 pre-seeded Solana agents
+│   │   └── skills.ts         ← Skill definitions & handlers
+│   │
+│   ├── bot/
+│   │   └── web.ts            ← Express server + routes
+│   │
+│   ├── config/
+│   │   └── index.ts          ← Environment config loader
+│   │
+│   ├── monitor/
+│   │   ├── crawler.ts        ← 30-min GitHub + DexScreener loop
+│   │   ├── dexscreener.ts    ← Token price fetcher
+│   │   └── github.ts         ← GitHub API client
+│   │
+│   └── solana/
+│       ├── agent.ts          ← Solana RPC wrapper
+│       └── commands.ts       ← Blockchain command handlers
+│
+└── public/
+    ├── index.html            ← Chat UI
+    ├── agent.html            ← Agent profile page
+    ├── registry.html         ← Registry dashboard
+    ├── manifest.html         ← OpenClaw skill manifest
+    └── banner.png            ← ◈ DROP YOUR BANNER HERE
 ```
 
 ---
 
-## License
+<div align="center">
 
-MIT -- built on Solana, powered by xAI Grok, always on-chain.
+**MIT License** · Built on Solana · Powered by xAI Grok · Made by **Mike drop**
+
+```
+◈ NODELING AGENT — always on-chain, never offline
+```
+
+</div>
